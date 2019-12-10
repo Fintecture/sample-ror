@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/Fintecture/fintecture-sdk-ruby.git
+  revision: 1b9b32b6282dd4e676206609e6644345ed6cd369
+  specs:
+    fintecture (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -195,6 +201,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  fintecture!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
