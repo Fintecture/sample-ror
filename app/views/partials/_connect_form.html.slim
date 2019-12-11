@@ -1,14 +1,12 @@
-= form_tag  set_up_index_path do
+= form_tag url_connect_index_path do
   .form-group
-    = label_tag 'environment', 'Environment'
-    = select_tag "environment", options_for_select(Fintecture::ENVIRONMENTS.collect{|env| [env, env]}, Fintecture.environment), name: 'object[environment]', class: 'form-control'
+    = label_tag 'amount', '* Amount'
+    = number_field_tag 'amount', @amount || 150, class: 'form-control', name: 'object[amount]'
   .form-group
-    = label_tag 'app_id', '* App ID'
-    = text_field_tag 'app_id', Fintecture.app_id, class: 'form-control', name: 'object[app_id]'
+    = label_tag 'currency', '* Currency'
+    = text_field_tag 'currency', @currency || 'EUR', name: 'object[currency]', class: 'form-control'
   .form-group
-    = label_tag 'app_secret', '* App Secret'
-    = text_field_tag 'app_secret', Fintecture.app_secret, name: 'object[app_secret]', class: 'form-control'
-  .form-group
-    = label_tag 'app_private_key', '* App Private Key'
-    = text_area_tag 'app_private_key', Fintecture.app_private_key, name: 'object[app_private_key]', class: 'form-control'
-  = submit_tag 'Set Up Fintecture', type: 'submit', class: 'btn btn-primary'
+    = label_tag 'communication', '* Communication'
+    = text_field_tag 'communication', @communication || '123', name: 'object[communication]', class: 'form-control'
+
+  = submit_tag 'Pay by bank', type: 'submit', class: 'btn btn-primary'

@@ -1,28 +1,34 @@
-class SetUpController < ActionController::Base
+class UrlConnectController < ActionController::Base
 
   def create
-    environment, app_id, app_secret, app_private_key = params[:object].values
+    @amount, @currency, @communication = params[:object].values
 
-    if app_id.blank? or app_secret.blank? or app_private_key.blank?
-      raise "I need a value for App ID, App Secret and App Private Key"
+    if @amount.blank? or @currency.blank? or @communication.blank?
+      raise "I need a value for Amount, Currency and Communication"
     end
 
-    Fintecture.environment = environment
-    Fintecture.app_id = app_id
-    Fintecture.app_secret = app_secret
-    Fintecture.app_private_key = app_private_key
+    payment_attrs = {
+        amount: @amount,
+        currency: @currency,
+        order_id: @communication,
+        customer_id: 1,
+        customer_full_name: 'Test bot',
+        customer_email: 'email@test.com',
+        customer_ip: '192.168.0.1',
+        redirect_uri: ENV['redirect_url'],
+        origin_uri: ''
+    }
 
-    redirect_to '/'
+    redirect_to Fintecture::Connect.connect_url_pis(payment_attrs)
   end
 
   private
 
   def allowed_params
     params.require(:object).permit(
-        :environment,
-        :app_id,
-        :app_secret,
-        :app_private_key
+        :amount,
+        :currency,
+        :communication
     )
   end
 end
