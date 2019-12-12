@@ -2,7 +2,7 @@ class CallbackController < ActionController::Base
 
   def callback
     @success_payment = params[:status] == 'payment_created' || params[:status] == 'payment_pending'
-    @verified = Fintecture::Connect.verify_url_parameters allowed_params.to_h
+    @verified = Fintecture::Connect.verify_url_parameters allowed_params
   end
 
   private

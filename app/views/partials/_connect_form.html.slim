@@ -1,12 +1,33 @@
-= form_tag url_connect_index_path do
-  .form-group
-    = label_tag 'amount', '* Amount'
-    = number_field_tag 'amount', @amount || 150, class: 'form-control', name: 'object[amount]'
-  .form-group
-    = label_tag 'currency', '* Currency'
-    = text_field_tag 'currency', @currency || 'EUR', name: 'object[currency]', class: 'form-control'
-  .form-group
-    = label_tag 'communication', '* Communication'
-    = text_field_tag 'communication', @communication || '123', name: 'object[communication]', class: 'form-control'
+- if @connect.errors.any?
+  #error_explanation
+    h2 = "#{pluralize(@connect.errors.count, 'error')}  prohibited this connect configuration"
+    ul
+      - @connect.errors.full_messages.each do |message|
+        li = message
 
-  = submit_tag 'Pay by bank', type: 'submit', class: 'btn btn-primary'
+= form_for @connect do |f|
+  .form-group
+    = f.label :amount, '* Amount'
+    = f.number_field :amount
+  .form-group
+    = f.label :currency, '* Currency'
+    = f.text_field :currency
+  .form-group
+    = f.label :order_id, '* Order ID'
+    = f.text_field :order_id
+
+  - if Fintecture.environment == 'production'
+    .form-group
+      = f.label :customer_id, '* Customer ID'
+      = f.number_field :customer_id
+    .form-group
+      = f.label :customer_ip, '* Customer IP'
+      = f.text_field :customer_ip
+    .form-group
+      = f.label :customer_full_name, '* Customer Full Name'
+      = f.text_field :customer_full_name
+    .form-group
+      = f.label :customer_email, '* Customer Email'
+      = f.text_field :customer_email
+
+  = f.submit 'Pay by bank'

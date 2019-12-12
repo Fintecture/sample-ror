@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 # Fintecture
-gem 'fintecture', github: 'Fintecture/fintecture-sdk-ruby'
+gem 'fintecture', '~>0.1.3'
 
 gem 'slim'
 

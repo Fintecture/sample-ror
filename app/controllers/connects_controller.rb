@@ -1,17 +1,20 @@
-class ConnectController < ActionController::Base
+class ConnectsController < ApplicationController
 
-  before_action :set_connect, only: :create
+  before_action :set_connect
 
   def create
 
     if @connect.valid?
-      if Fintecture.environment == 'production'
-        @connect.customer_full_name: 'Test bot'
-        @connect.customer_email: 'email@test.com'
-        @connect.customer_ip: '192.168.0.1'
+      if Fintecture.environment != 'production'
+        @connect.customer_full_name = 'Test bot'
+        @connect.customer_email = 'email@test.com'
+        @connect.customer_ip = '192.168.0.1'
+        @connect.customer_id = 123
       end
 
       redirect_to Fintecture::Connect.connect_url_pis @connect
+    else
+      render 'static/home'
     end
 
   end
@@ -34,7 +37,7 @@ class ConnectController < ActionController::Base
     connect_params.merge(
       {
         redirect_uri: ENV['redirect_url'],
-        origin_uri: ''
+        origin_uri: ENV['redirect_url'].remove('/callback')
       }
     )
   end
@@ -43,7 +46,7 @@ class ConnectController < ActionController::Base
     Connect
   end
 
-  def set_travel
+  def set_connect
     @connect = model.new(payments_attributes)
   end
 end
