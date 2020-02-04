@@ -13,13 +13,10 @@
     = f.label :currency, '* Currency'
     = f.text_field :currency
   .form-group
-    = f.label :order_id, '* Order ID'
-    = f.text_field :order_id
+    = f.label :communication, '* Communication'
+    = f.text_field :communication
 
   - if Fintecture.environment == 'production'
-    .form-group
-      = f.label :customer_id, '* Customer ID'
-      = f.number_field :customer_id
     .form-group
       = f.label :customer_ip, '* Customer IP'
       = f.text_field :customer_ip
