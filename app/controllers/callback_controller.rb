@@ -1,7 +1,7 @@
 class CallbackController < ActionController::Base
 
   def callback
-    @success_payment = params[:status] == 'payment_created' || params[:status] == 'payment_pending'
+    @success_payment = params[:status] == 'payment_created'
 
     tokens = Fintecture::Pis.get_access_token
 
@@ -9,8 +9,9 @@ class CallbackController < ActionController::Base
 
     payment_response = Fintecture::Pis.get_payments tokens['access_token'], session_id
     payment_response_body = JSON.parse payment_response.body
+    status = payment_response_body['meta']['status']
 
-    @verified = (payment_response_body['meta']['status'] === 'payment_created')
+    @verified = (status === 'payment_created')
   end
 
   def ais_callback

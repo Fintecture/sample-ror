@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Fintecture/fintecture-sdk-ruby.git
-  revision: 66bcfbdfafa13e2705ac0760f79586187d96c523
+  revision: adbbb91970f3898f454c1135bffaabc58643a6a3
   specs:
     fintecture (0.1.7)
       faraday
