@@ -24,20 +24,121 @@ The server will executed on port 3000 by default as usual. You can change the po
     
     $ rails server --port [your port]
 
-## Set Up
+## Set Up (.env)
 
-This project has a `.env` file that provides all the parameters required to execute the sample, but you are free to replace the values with yours. To do that you have to create an application before on the [developer console](https://console.fintecture.com).
+This sample project has a `.env_example` file that provides fake parameters, you should replace the values with yours. To do that you have to create an application before on the [developer console](https://console.fintecture.com).
 
 ```
-fintecture_app_id="128925b2-1106-48ce-a0a0-3b75bb2e0d48"
-fintecture_app_secret="aa6d8452-4a64-4704-a810-be77993cb1e5"
-fintecture_app_private_key="-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDMpUBcC0B7lmec\nEaNV5xnxlJaHxvQAJFKuJqeApZu8TifWrFzql7WbPjeoEV4Iqm1oWyCVj3woZtLm\nCIXqBN6ZUcjytYeUmsZJmk7s9r1oZIVRBzVguyLOT7juZ+zcv9PzSDb6KItigKgo\n7sgb8hq1sNJZARBiMvJB4HkA8LMNluMcVd8wjADKyIKUdRIrMw9rjXmRIEUI1Loc\nkU1KrpYpDUIhBg9K7dBHA20b/YjvEIC1TC4F0tlSe6XAeXGersKSDMYw1+d183xK\n5JzZIkn4w8kFwQhTBF+Ouym/z1rFbthPnEPK2EGp8WWAfZ41a3QtCXwQkGPO1V+H\nV9mYIhJxAgMBAAECggEAAOczVHwWejgBltFL7lETUjnn3la52pDFVBqVjJE2iJBh\nIJyKLIrT8ejY1nF2G0jzngectaf5kO4LBiLhZ1djP9mFakzdF22lnHaY4Ttj7BSi\nagT1xsPEXydyU0Ly/YA6nW7o0rPanx6w90rHaCOqaWKpf/vuFYRuM5H0+MAZeOev\nccyU3XwEjEmGk502hd9uWJklLqAjvKl66u+/df+Bp3UTHL5uJEXzA4ubCto/wtj7\nVIGUBNN6+VCCGWrTIb/zMg8YTQSFnmyH/ZYuF1FNFebuk3VIdruoHgIxhvkuMTT9\nzV6GImKA9lu2xCk6PPYLkD72g1N6k2MgMzj0+B0MYQKBgQDsNaicGWH8pK2QwzdB\n4tUeCqUGS8XES4VYQ6WIkWnk5nFt4Oc3+CdqJtfZwV/Z0VtzArYNEMROIfKXaGx1\noyiuzdjmRtu2fTmRTmlMfXTLF9L2wVbscmfk9gRC19Xcc0HEhkEJBVIYn6Ilqgy8\nsjv/OuHUiVIA8P4192lWV8qzIQKBgQDdypclfayPVY93siXZX8rhgdrq0vNFGQNp\nacD8WyhH7iMa+fnQeyZOzQtHFIcPYBEPcmqsCfX1+VVYKQApae0yHRtFO5j7vujr\n1pQNBO1+EQvWUuwub1+8LdQqnv0l8HWqYcSu7ECxxc0OhfiHgT5O86ISKuu+vwfC\nYaGzR0fFUQKBgQCiiSnEgBLU7dwgyLO1Ooi7a0ey1WD4eZ7/5Ux6dNURFSDoIuH3\nuWIlwSS2SkHSeCUdNrhetTLfMKzlUo2PRP4xiqO9kPSO1gxO2E3MvGcpePNJqDBP\n80laW48DD9GxJ/4RZPBLbMXY+79ve1vYXCy8q5/Jx9QNocbLC7wIFdD9AQKBgD6w\ncKBsMUYiTPbsJ76VUOcEqTgOgCxbsZcuCRpLOct7B/ksBuxioqVLV5CzwKkb4jaX\nhIc0GY14+CJ/FEigZCbyCy86dTdS8ssWT6qOZgJoFwxxS8ikOk8aNQoG/k6m9Ns/\n3zQCGxckbZ1ZSLIkWdQ/EORJtXCo1iyfI/FkiGjBAoGBAM6bd+5sPQmPqU3Sq5S8\nKN6ZinjnDh7MtEnC6LegMU0Tkb9HIBL0QnzYX/q3Ps6dekHfc5gP6vY5Ym6Wu7M7\nC09apUAFOCzzSyE7R+r4aWkifGaPWMU/SsX8tR5wldB0gxFom+qaK2jLJoiVcX16\niBEZTlWdJeeo3PxDgiHt8uaa\n-----END PRIVATE KEY-----"
+fintecture_app_id="a229d811-0f17-4295-b135-99bb1cb2ca63s"
+fintecture_app_secret="a50afa3e-fea5-4bb8-86bd-b52c945fc0e8g"
+fintecture_app_private_key="-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDI8ft2cX5Zos3X\nPLT5/XlM6GYxAc122+fufVEKlMWIxZiSVfElhvznTa5jQPyTw5dshBZCZ6EZK/RT\noGZTrUC7EE6/ZI5gvVz6foVQHbpMIyGQ0dL2ne/2+gSxmOO3XtdIYQp7k0uINtUr\n2Pbzi8n//FRj9TJqpQoHN1PB+UPBzjklis8o4pZctZ9HVpzb6vK8qga1L+ja+E7K\nd9EdueV5Y29Uh7bPoGDGrFjZrQpcbvHEIvlvdMIabrpBu/4uzZ4f663as/vHDMDr\n9zP4VOpZcME4D2UBiRiztbDQukgUQnYMudHfN6zuYIAig9eSI2sPQlgciUWJ+ryD\nWkmwRozPAgMBAAECggEAV3+O6KdIxk0u5m8nusdVn1h+zw4i4oOk/WMR+9KGJSUt\nZ2MGyzl5PFrF+bAdi1YaxITLkITBUE2kaRmqFPuW+R2DvLFTkepC50xaTmVzbp3J\nit7ixsJE8D0z+AVD+t/QTFL9Fowv0pNVxW8HMUuIXPAJ6zCkkG1m7Xd5ADjC+UtF\nQAaVHcAmz2lKRBCP9lzzCN2TfVpMGu71KcpaPXXhzuHWXsi2jEWyjvPajfLQvlQI\nUVsLRJsNlz1PILslU/tuu2vASmpl7aWy+PxXGYTd7UOqeQ+es4xYpxmMfR2hhV4Y\nOVOMRtqzmgh8QCEsuVfuA5sXxrksc/0J7iGXm2+SYQKBgQD9CoJmPt8KicQDkbsY\ni6fjbhWOsVm1iWZJjXQR1XwsDmOmlK8gBfwHm2wFhaRt5G1jeo0/Trme4bKpvSOn\nddGJjJln3vk7TwcCquo/G7D+ZzB3IqL2FEqZqPFTTTu/eVHVtPXUurt4SpkZnzH+\n1vt3YKKDq31e4auBIW+ZBbl2UQKBgQDLS4WGQTCVZleeQ02PbdSd2IcQL/4ye3ao\nm6btC0GmrhhTd+rXdVdRRxxkkmnQDLVOnj05dCXOxtnhVMTsU+B4hUTNQvp8gW1c\nBID5p08kvUOjSrfjkE5dIyp08H9cuFTuwL55sIvvs5NimJ8fWoaOCb1pgtzrVrl7\no40uRCppHwKBgQCPUWd//7YWYucZWm4MvfTONKiTFFIKJxM/L5YBD9hvn4rDa80w\npxMTP+1Tx1jVQR7PzDa6F528pnqp9s196JZQgMjWcwzYka8XzLQ2IDoELW/e2khQ\ndje2hmCA3OqtTUqTbxYZcdYCkMXcJDWN8Denap1BVF0C43BfCBAMLJjZsQKBgFRl\nUtZMY+Xx6bfrCtzbZKPuywteUTIV7UnL7H2F6chPiAvGwbiWnxw/4DqkScc0L2Sm\n7pXWcQepp7QS4/mUTKDb+pcYEjLz7DmCKST7XzDKXbUBhNu1AcNKoQqQ+N6+K4w+\nehS8xStKqooJAC4c/7Uht/+Ac0RD6Za5bBfj9pNTAoGAGHiUKyN/wB5joM6/K7bm\nStLwtZclgd2jkqPp5yuhmSpXPkQmEePhWrHuEx2pF6hdSvI1RRydNgTn0YmpB0bM\nWDQPSNRwcsKTJVM2qb6Xx2ziBhGZf1vdyYLlin+vigoWgGg5xUAsUG0cGbloZ/dB\nWosgDj9AGW6w4ETDnTGCA1QQ=\n-----END PRIVATE KEY-----"
 ```
 
-Your `fintecture.rb` file in initializers will be in charge to load those variables:
+
+Your `config/initializers/fintecture.rb` file in initializers will be in charge to load those variables:
 
 ```ruby
 Fintecture.app_id = ENV['fintecture_app_id']
 Fintecture.app_secret = ENV['fintecture_app_secret']
-Fintecture.app_private_key = ENV['fintecture_app_private_key']
+Fintecture.private_key = ENV['fintecture_app_private_key']
+```
+
+## Set Up (secrets.yml)
+
+This sample project has a `secrets.yml` file that provides fake parameters, you should replace the values with yours. To do that you have to create an application before on the [developer console](https://console.fintecture.com).
+
+```
+fintecture_app_id: a229d811-0f17-4295-b135-99bb1cb2ca63s
+fintecture_app_secret: a50afa3e-fea5-4bb8-86bd-b52c945fc0e8g
+fintecture_app_private_key: |
+  -----BEGIN PRIVATE KEY-----
+  MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDI8ft2cX5Zos3X
+  PLT5/XlM6GYxAc122+fufVEKlMWIxZiSVfElhvznTa5jQPyTw5dshBZCZ6EZK/RT
+  oGZTrUC7EE6/ZI5gvVz6foVQHbpMIyGQ0dL2ne/2+gSxmOO3XtdIYQp7k0uINtUr
+  2Pbzi8n//FRj9TJqpQoHN1PB+UPBzjklis8o4pZctZ9HVpzb6vK8qga1L+ja+E7K
+  d9EdueV5Y29Uh7bPoGDGrFjZrQpcbvHEIvlvdMIabrpBu/4uzZ4f663as/vHDMDr
+  9zP4VOpZcME4D2UBiRiztbDQukgUQnYMudHfN6zuYIAig9eSI2sPQlgciUWJ+ryD
+  WkmwRozPAgMBAAECggEAV3+O6KdIxk0u5m8nusdVn1h+zw4i4oOk/WMR+9KGJSUt
+  Z2MGyzl5PFrF+bAdi1YaxITLkITBUE2kaRmqFPuW+R2DvLFTkepC50xaTmVzbp3J
+  it7ixsJE8D0z+AVD+t/QTFL9Fowv0pNVxW8HMUuIXPAJ6zCkkG1m7Xd5ADjC+UtF
+  QAaVHcAmz2lKRBCP9lzzCN2TfVpMGu71KcpaPXXhzuHWXsi2jEWyjvPajfLQvlQI
+  UVsLRJsNlz1PILslU/tuu2vASmpl7aWy+PxXGYTd7UOqeQ+es4xYpxmMfR2hhV4Y
+  OVOMRtqzmgh8QCEsuVfuA5sXxrksc/0J7iGXm2+SYQKBgQD9CoJmPt8KicQDkbsY
+  i6fjbhWOsVm1iWZJjXQR1XwsDmOmlK8gBfwHm2wFhaRt5G1jeo0/Trme4bKpvSOn
+  ddGJjJln3vk7TwcCquo/G7D+ZzB3IqL2FEqZqPFTTTu/eVHVtPXUurt4SpkZnzH+
+  1vt3YKKDq31e4auBIW+ZBbl2UQKBgQDLS4WGQTCVZleeQ02PbdSd2IcQL/4ye3ao
+  m6btC0GmrhhTd+rXdVdRRxxkkmnQDLVOnj05dCXOxtnhVMTsU+B4hUTNQvp8gW1c
+  BID5p08kvUOjSrfjkE5dIyp08H9cuFTuwL55sIvvs5NimJ8fWoaOCb1pgtzrVrl7
+  o40uRCppHwKBgQCPUWd//7YWYucZWm4MvfTONKiTFFIKJxM/L5YBD9hvn4rDa80w
+  pxMTP+1Tx1jVQR7PzDa6F528pnqp9s196JZQgMjWcwzYka8XzLQ2IDoELW/e2khQ
+  dje2hmCA3OqtTUqTbxYZcdYCkMXcJDWN8Denap1BVF0C43BfCBAMLJjZsQKBgFRl
+  UtZMY+Xx6bfrCtzbZKPuywteUTIV7UnL7H2F6chPiAvGwbiWnxw/4DqkScc0L2Sm
+  7pXWcQepp7QS4/mUTKDb+pcYEjLz7DmCKST7XzDKXbUBhNu1AcNKoQqQ+N6+K4w+
+  ehS8xStKqooJAC4c/7Uht/+Ac0RD6Za5bBfj9pNTAoGAGHiUKyN/wB5joM6/K7bm
+  StLwtZclgd2jkqPp5yuhmSpXPkQmEePhWrHuEx2pF6hdSvI1RRydNgTn0YmpB0bM
+  WDQPSNRwcsKTJVM2qb6Xx2ziBhGZf1vdyYLlin+vigoWgGg5xUAsUG0cGbloZ/dB
+  WosgDj9AGW6w4ETDnTGCA1QQ=
+  -----END PRIVATE KEY-----
+```
+
+
+Your `config/initializers/fintecture.rb` file in initializers will be in charge to load those variables:
+
+```ruby
+Fintecture.app_id = Rails.application.secrets.fintecture_app_id
+Fintecture.app_secret = Rails.application.secrets.fintecture_app_secret
+Fintecture.private_key = Rails.application.secrets.fintecture_app_private_key
+```
+
+## Set Up (credentials.yml.enc)
+
+This sample project has a `credentials.yml.enc` file that provides fake parameters, you should replace the values with yours. To do that you have to create an application before on the [developer console](https://console.fintecture.com).
+
+To open it you could use this command line
+```
+EDITOR=vim rails credentials:edit
+```
+
+This is the fintecture structure configuration you should have (using your values).
+```
+fintecture_app_id: a229d811-0f17-4295-b135-99bb1cb2ca63s
+fintecture_app_secret: a50afa3e-fea5-4bb8-86bd-b52c945fc0e8g
+fintecture_app_private_key: |
+  -----BEGIN PRIVATE KEY-----
+  MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDI8ft2cX5Zos3X
+  PLT5/XlM6GYxAc122+fufVEKlMWIxZiSVfElhvznTa5jQPyTw5dshBZCZ6EZK/RT
+  oGZTrUC7EE6/ZI5gvVz6foVQHbpMIyGQ0dL2ne/2+gSxmOO3XtdIYQp7k0uINtUr
+  2Pbzi8n//FRj9TJqpQoHN1PB+UPBzjklis8o4pZctZ9HVpzb6vK8qga1L+ja+E7K
+  d9EdueV5Y29Uh7bPoGDGrFjZrQpcbvHEIvlvdMIabrpBu/4uzZ4f663as/vHDMDr
+  9zP4VOpZcME4D2UBiRiztbDQukgUQnYMudHfN6zuYIAig9eSI2sPQlgciUWJ+ryD
+  WkmwRozPAgMBAAECggEAV3+O6KdIxk0u5m8nusdVn1h+zw4i4oOk/WMR+9KGJSUt
+  Z2MGyzl5PFrF+bAdi1YaxITLkITBUE2kaRmqFPuW+R2DvLFTkepC50xaTmVzbp3J
+  it7ixsJE8D0z+AVD+t/QTFL9Fowv0pNVxW8HMUuIXPAJ6zCkkG1m7Xd5ADjC+UtF
+  QAaVHcAmz2lKRBCP9lzzCN2TfVpMGu71KcpaPXXhzuHWXsi2jEWyjvPajfLQvlQI
+  UVsLRJsNlz1PILslU/tuu2vASmpl7aWy+PxXGYTd7UOqeQ+es4xYpxmMfR2hhV4Y
+  OVOMRtqzmgh8QCEsuVfuA5sXxrksc/0J7iGXm2+SYQKBgQD9CoJmPt8KicQDkbsY
+  i6fjbhWOsVm1iWZJjXQR1XwsDmOmlK8gBfwHm2wFhaRt5G1jeo0/Trme4bKpvSOn
+  ddGJjJln3vk7TwcCquo/G7D+ZzB3IqL2FEqZqPFTTTu/eVHVtPXUurt4SpkZnzH+
+  1vt3YKKDq31e4auBIW+ZBbl2UQKBgQDLS4WGQTCVZleeQ02PbdSd2IcQL/4ye3ao
+  m6btC0GmrhhTd+rXdVdRRxxkkmnQDLVOnj05dCXOxtnhVMTsU+B4hUTNQvp8gW1c
+  BID5p08kvUOjSrfjkE5dIyp08H9cuFTuwL55sIvvs5NimJ8fWoaOCb1pgtzrVrl7
+  o40uRCppHwKBgQCPUWd//7YWYucZWm4MvfTONKiTFFIKJxM/L5YBD9hvn4rDa80w
+  pxMTP+1Tx1jVQR7PzDa6F528pnqp9s196JZQgMjWcwzYka8XzLQ2IDoELW/e2khQ
+  dje2hmCA3OqtTUqTbxYZcdYCkMXcJDWN8Denap1BVF0C43BfCBAMLJjZsQKBgFRl
+  UtZMY+Xx6bfrCtzbZKPuywteUTIV7UnL7H2F6chPiAvGwbiWnxw/4DqkScc0L2Sm
+  7pXWcQepp7QS4/mUTKDb+pcYEjLz7DmCKST7XzDKXbUBhNu1AcNKoQqQ+N6+K4w+
+  ehS8xStKqooJAC4c/7Uht/+Ac0RD6Za5bBfj9pNTAoGAGHiUKyN/wB5joM6/K7bm
+  StLwtZclgd2jkqPp5yuhmSpXPkQmEePhWrHuEx2pF6hdSvI1RRydNgTn0YmpB0bM
+  WDQPSNRwcsKTJVM2qb6Xx2ziBhGZf1vdyYLlin+vigoWgGg5xUAsUG0cGbloZ/dB
+  WosgDj9AGW6w4ETDnTGCA1QQ=
+  -----END PRIVATE KEY-----
+```
+
+
+Your `config/initializers/fintecture.rb` file in initializers will be in charge to load those variables:
+
+```ruby
+Fintecture.app_id = Rails.application.credentials.fintecture_app_id
+Fintecture.app_secret = Rails.application.credentials.fintecture_app_secret
+Fintecture.private_key = Rails.application.credentials.fintecture_app_private_key
 ```
