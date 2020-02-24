@@ -6,7 +6,9 @@ ruby '2.5.1'
 # Fintecture
 #gem 'fintecture', github: 'Fintecture/fintecture-sdk-ruby'
 
-gem 'fintecture', '~> 0.1.7'
+# gem 'fintecture', '~> 0.1.7'
+
+gem 'fintecture', :git => 'https://github.com/Fintecture/fintecture-sdk-ruby.git', :branch => '0.1.8'
 
 gem 'slim'
 

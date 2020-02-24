@@ -34,7 +34,8 @@ class ConnectsController < ApplicationController
         :currency,
         :communication,
         :customer_full_name,
-        :customer_email
+        :customer_email,
+        :customer_ip
     )
   end
 
